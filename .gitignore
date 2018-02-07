@@ -1,0 +1,17 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+### End of Python ###
+
+# Pycharm files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# environment files
+envs.json
+envs_dev.json
