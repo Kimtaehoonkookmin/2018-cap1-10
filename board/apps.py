@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class BoardsConfig(AppConfig):
-    name = 'boards'
+    name = 'board'
     verbose_name = "kmu community"
