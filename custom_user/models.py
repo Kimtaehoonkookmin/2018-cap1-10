@@ -25,6 +25,7 @@ class UnivUserManager(BaseUserManager):
             password=password,
             nickname=nickname,
         )
+        user.is_active = True
         user.is_admin = True
         user.save(using=self._db)
         return user

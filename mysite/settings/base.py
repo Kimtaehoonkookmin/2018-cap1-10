@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'custom_user.apps.CustomUserConfig',
     'boards.apps.BoardsConfig',
 ]
 
@@ -107,3 +108,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Custom user model
+AUTH_USER_MODEL = 'custom_user.UnivUser'
