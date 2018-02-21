@@ -1,0 +1,22 @@
+{% extends "board/base_site.html" %}
+
+{% block content %}
+
+  {% if user.is_active %}
+  <h2>환영합니다, {{user.nickname}}님 </h2>
+  <a href="{% url 'logout'%}?next={{ request.path | urlencode }}">로그아웃</a>
+  
+  {% else %}
+    {% if form.errors %}
+    <p>ID나 비밀번호가 일치하지 않습니다.</p>
+    {% endif %}
+  
+  <form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="" />
+    {{ form.as_p }}
+    <button type="submit">로그인</button>
+  </form>
+  {% endif %}
+
+{% endblock content %}

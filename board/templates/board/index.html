@@ -1,1 +1,72 @@
 {% extends "board/base_site.html" %}
+
+{% block login %}
+  {% if user.is_active %}
+  <div id="account" class="section_minime">
+    <div style="width:277px; height:120px; border:1px solid #ccc;">
+      <div class="default_login" id="login">
+        <div class="profile" style="padding:13px 13px;">
+          <div class="user_area">
+            <div class="user_info">
+              <div class="private">
+                  {{user.nickname}}님
+              </div>
+              <div class="my_service">
+                <button type="button" class="btn btn-default" onClick="location.href='{% url 'logout'%}?next={{ request.path | urlencode }}'" style="border:solid 1px;">로그아웃</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div id="account" class="section_minime">
+    <div style="width:277px; height:120px; border:1px solid #ccc;">
+      <div class="default_login" id="login">
+        <div class="list_box" style="padding:13px 13px;">
+          <form id="login-form" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <table border="0" cellpadding="3" width="100%">
+              <tbody>
+                <tr>
+                  <td colspan="2" style="padding:0px; margin:0px;">
+                    <input type="checkbox" name="keep_signed" id="keepid" valu="Y" onclick="if(this.checked) return confirm(keep_signed_msg);">
+                    <label for="keepid">로그인 유지</label>
+                  </td>
+                </tr>
+                <tr>
+                  <!--<td> ID : </td>-->
+                  <td>
+                    <input type="text" name="username" autofocus="" maxlength="254" id="id_username" required="" data-cip-id="id_username" tabindex="1" style="width:150px;" placeholder="아이디">
+                  </td>
+                  <td rowspan="2">
+                    <button type="submit" class="btn btn-success pull-right" >로그인</button>
+                    <input type="hidden" name="next" value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <!--<td> PW : </td>-->
+                  <td>
+                    <input type="password" name="password" required="" id="id_password" data-cip-id="id_password" tabindex="2" style="width:150px;"placeholder="패스워드">
+                  </td>                  
+                </tr>
+                <tr>
+                  <td colspan="2" class="list_button" style="padding:0px; margin:0px;">
+                    <a href="#">아이디 비밀번호찾기</a>
+                    <a href="#">회원가입</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            {% if form.errors %}
+            <p>ID나 비밀번호가 일치하지 않습니다.</p>
+            {% endif %}
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endblock login %}

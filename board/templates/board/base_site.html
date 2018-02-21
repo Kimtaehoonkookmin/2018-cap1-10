@@ -8,14 +8,14 @@
       {% endblock meta %}
 
       <title>KMU COMMUNITY</title>
-
+      {% load static %}
       {% block stylesheets %}
         <!-- Bootstrap core CSS -->
-        <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{% static "board/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
       {% endblock stylesheets %}
       {% block custom_css %}
         <!-- Custom styles for this template -->
-        <link href="/static/build/css/kmu.css" rel="stylesheet">
+        <link href="{% static "board/build/css/kmu.css" %}" rel="stylesheet">
       {% endblock custom_css %}
     {% endblock head %}
   </head>
@@ -29,11 +29,11 @@
           <div class="headContainer">
             <div class="inBox">
               <div class="head_utilMenu">
-                <span><a href="#">로그인</a></span>
+                <span><a href="{% url 'login' %}">로그인</a></span>
                 <span><a href="#">회원가입</a></span>
               </div>
               <h1 class="KMU_logo">
-                  <a href="#">KMU-LOGO</a></h1>
+                  <a href="/">KMU-LOGO</a></h1>
             </div>
 
           </div>
@@ -152,6 +152,7 @@
               </div>
               <!--로그인-->
               <div class="column_right">
+                {% block login %}
                 <div id="account" class="section_minime">
                   <div style="width:277px; height:120px; border:1px solid #ccc;">
                     <div class="default_login" id="login">
@@ -170,7 +171,7 @@
                                 <input name="user_id" type="text" class="input" id="login_form_user_id" tabindex="1" style="width:150px;">
                               </td>
                               <td rowspan="2">
-                                <button type="button" class="btn btn-dafault" href="#">로그인</button>
+                                <button type="button" class="btn btn-success" href="#">로그인</button>
                               </td>
                             </tr>
                             <tr>
@@ -191,6 +192,7 @@
                     </div>
                   </div>
                 </div>
+                {% endblock login %}
                 <!--공지사항-->
                 <div style="height:194px; border:1px solid #ccc; position:relative; margin-top:6px;">
                   <div style="width:100%; height:30px; border-bottom:1px solid #ccc; background:#f5f5f5; padding:7px 0px 0px 5%;">

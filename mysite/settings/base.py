@@ -111,3 +111,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Custom user model
 AUTH_USER_MODEL = 'custom_user.UnivUser'
+
+# Auth settings
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
