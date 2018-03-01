@@ -1,0 +1,47 @@
+{% extends "board/base_site.html" %}
+
+{% load static %}
+{% block custom_css %}
+  <!-- Custom styles for this template -->
+  <link href="{% static "custom_user/build/css/join.css" %}" rel="stylesheet">
+{% endblock custom_css %}
+
+{% block content %}
+  <!--회원가입-->
+  <form name="joinCertForm" id="joinCertForm" method="post">
+    <div id="container">
+      <!--내용-->
+      <div class="content">
+        <div class="pageTitleWrap">
+          <h2 class="h2_title">회원가입하기</h2>
+        </div>
+        <div class="joinWrap">
+          <div class="joinCont">
+            <div class="loginGroup border">
+              <div class="logWrite">
+                <div class="writeTit">이메일</div>
+                <input type="email" name="email" maxlength="50" id="id_email" required class="w240">
+                <span style="font-size:20px; color:gray;">@kookmin.ac.kr</span>
+                <div class="writeTit">비밀번호</div>
+                <input type="password" name="password1" id="id_password" required class="w240">
+                <div class="writeTit">비밀번호 확인</div>
+                <input type="password" name="password2" id="id_password2" required class="w240">
+                <div class="writeTit">닉네임</div>
+                <input type="text" name="nickname" maxlength="20" required class="w240">
+              </div>
+            </div>
+            <div class="btnCenter">
+              <span class="button1">
+                <button type="button" class="btn btn-default" onclick="location.href='{% url "index" %}'">취소</button>
+              </span>
+              <span class="button1">
+                <button type="submit" class="btn btn-primary">확인</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endblock content %}
+

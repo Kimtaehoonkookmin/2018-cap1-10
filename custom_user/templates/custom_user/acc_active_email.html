@@ -1,0 +1,7 @@
+{% autoescape off %}
+{{ user.nickname }}님 안녕하세요?
+계정을 활성하하기 위해 아래 링크를 클릭하여 이메일 주소를 인증해주십시오.
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

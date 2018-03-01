@@ -1,5 +1,36 @@
 {% extends "board/base_site.html" %}
 
+{% block header %}
+        <!--HEADER-->
+        <div id="header">
+          <div class="headContainer">
+            <div class="inBox">
+              <div class="head_utilMenu">
+                <span><a href="{% url 'login' %}">로그인</a></span>
+                <span><a href="{% url 'signup' %}">회원가입</a></span>
+              </div>
+              <h1 class="KMU_logo">
+                  <a href="/">KMU-LOGO</a></h1>
+            </div>
+
+          </div>
+          <!--상단바-->
+          <div class="gnbContainer">
+            <div class="inBox">
+              <div class="gnb_menu" id="dvHeadGnbMenu">
+                <ul class="clearfix">
+                  <li><a class="first_a" href="#">커뮤니티</a></li>
+                  <li><a class="first_a" href="#">캠퍼스</a></li>
+                  <li><a class="first_a" href="#">대학생활</a></li>
+                  <li><a class="first_a" href="#">강의정보</a></li>
+                  <li><a class="first_a" href="#">생활정보</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endblock header %}
+
 {% block login %}
   {% if user.is_active %}
   <div id="account" class="section_minime">
