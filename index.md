@@ -10,40 +10,41 @@
 소개 영상 추가 예정
 
 
-### 3. 팀 소개
+### 3. Abstract
+
+This is service that every Kookmin University members can communicate easy with another members. We develop Web Service for PC and Android Application for mobile.
+
+
+### 4. 팀 소개
 
 ## 김종민 (팀장)
 	# 학번 : 20133211
-	# 역할 : 안드로이드 APP 개발 및 디자인
+	# 역할 : 안드로이드 어플리케이션 개발 및 디자인
 	# E-mail : whdno1@kookmin.ac.kr
 
 ## 김형우
-	# 학번 : 
-	# 역할 :
-	# E-mail : 
+	# 학번 : 20153168
+	# 역할 : Web 총괄 및 AWS 인스턴스 관리
+	# E-mail : snake1754@gmail.com
 
 ## 김우찬
-	# 학번 : 
-	# 역할 :
-	# E-mail : 
+	# 학번 : 20133209
+	# 역할 : Web 디자인, APP
+	# E-mail : kwc2013@kookmin.ac.kr
 
 ## 조영랑
-	# 학번 :
-	# 역할 : 
-	# E-mail : 
+	# 학번 : 20143105
+	# 역할 : 웹페이지 제작 HTML, CSS
+	# E-mail : qhdk8243@naver.com
 
 
-### 4. 사용법
+### 5. 사용법
 
 ## Web
 	# 사용 IDE : Pycharm
 	# 사용 개발 언어 : Python, HTML, JavaScript 등
+	# 사용 프레임워크 : django
 
 ## App
 	# 사용 IDE : Android Studio
 	# 사용 개발 언어 : Java, XML
-
-
-### 5. 기타
-
-내용 추가 예정
