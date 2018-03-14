@@ -21,11 +21,11 @@
 
         </activity>
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".sign.in.and.up.LoginActivity">
 
         </activity>
 
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".sign.in.and.up.SignUpActivity">
 
         </activity>
     </application>

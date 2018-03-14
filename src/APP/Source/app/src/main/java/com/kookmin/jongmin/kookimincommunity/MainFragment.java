@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.kookmin.jongmin.kookimincommunity.community.CommunityFragment;
+
 /**
  * Created by JongMin on 2018-02-19.
  */

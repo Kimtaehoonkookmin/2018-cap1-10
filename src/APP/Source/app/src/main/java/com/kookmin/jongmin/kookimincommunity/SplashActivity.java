@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.kookmin.jongmin.kookimincommunity.sign.in.and.up.LoginActivity;
+
 /**
  * Created by JongMin on 2018-02-09.
  */

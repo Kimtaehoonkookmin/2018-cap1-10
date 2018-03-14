@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.kookmin.jongmin.kookimincommunity.sign.in.and.up.LoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     Activity activity = this;

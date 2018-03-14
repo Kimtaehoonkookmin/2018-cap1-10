@@ -1,12 +1,14 @@
-package com.kookmin.jongmin.kookimincommunity;
+package com.kookmin.jongmin.kookimincommunity.sign.in.and.up;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.kookmin.jongmin.kookimincommunity.MessageBox;
+import com.kookmin.jongmin.kookimincommunity.R;
 
 /**
  * Created by JongMin on 2018-02-09.
