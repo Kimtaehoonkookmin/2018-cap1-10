@@ -1,21 +1,48 @@
 {% extends "board/base_site.html" %}
 
+{% load static %}
+{% block custom_css %}
+  <!-- Custom styles for this template -->
+  <link href="{% static "custom_user/build/css/join.css" %}" rel="stylesheet">
+{% endblock custom_css %}
+
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
+  <!--회원가입-->
+  <form name="joinCertForm" id="joinCertForm" method="post">
     {% csrf_token %}
-      {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="display: none">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-      {% endfor %}
-    <button type="submit">Sign up</button>
+    <div id="container">
+      <!--내용-->
+      <div class="content">
+        <div class="pageTitleWrap">
+          <h2 class="h2_title">회원가입하기</h2>
+        </div>
+        <div class="joinWrap">
+          <div class="joinCont">
+            <div class="loginGroup border">
+              <div class="logWrite">
+                <div class="writeTit">이메일</div>
+                <input type="text" name="username" maxlength="20" id="id_username" required class="w240">
+                <span style="font-size:20px; color:gray;">@kookmin.ac.kr</span>
+                <div class="writeTit">비밀번호</div>
+                <input type="password" name="password1" id="id_password" required class="w240">
+                <div class="writeTit">비밀번호 확인</div>
+                <input type="password" name="password2" id="id_password2" required class="w240">
+                <div class="writeTit">닉네임</div>
+                <input type="text" name="nickname" id="id_nickname" maxlength="20" required class="w240">
+              </div>
+            </div>
+            <div class="btnCenter">
+              <span class="button1">
+                <button type="button" class="btn btn-default" onclick="location.href='{% url "index" %}'">취소</button>
+              </span>
+              <span class="button1">
+                <button type="submit" class="btn btn-primary">확인</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
-{% endblock %}
+{% endblock content %}
+
