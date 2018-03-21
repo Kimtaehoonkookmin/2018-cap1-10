@@ -12,6 +12,8 @@ import com.kookmin.jongmin.kookimincommunity.MainActivity;
 import com.kookmin.jongmin.kookimincommunity.MessageBox;
 import com.kookmin.jongmin.kookimincommunity.R;
 
+import org.w3c.dom.Text;
+
 /**
  * Created by JongMin on 2018-02-09.
  */
@@ -27,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
 
         Button login_button = findViewById(R.id.login_button);
         TextView signup_button = findViewById(R.id.signup_text_view);
+        TextView find_id_button = findViewById(R.id.find_id_text_view);
+        TextView find_pw_button = findViewById(R.id.find_pw_text_view);
 
         login_button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v)
@@ -58,6 +62,20 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 LoginActivity.this.startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+            }
+        });
+
+        find_id_button.setOnClickListener(new TextView.OnClickListener() {
+            public void onClick(View v)
+            {
+                LoginActivity.this.startActivity(new Intent(LoginActivity.this, FindIdActivity.class));
+            }
+        });
+
+        find_pw_button.setOnClickListener(new TextView.OnClickListener() {
+            public void onClick(View v)
+            {
+                LoginActivity.this.startActivity(new Intent(LoginActivity.this, FindPwActivity.class));
             }
         });
     }

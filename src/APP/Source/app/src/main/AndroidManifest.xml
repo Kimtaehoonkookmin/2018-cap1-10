@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,15 +18,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".sign.in.and.up.LoginActivity">
+        <activity android:name=".sign.in.and.up.LoginActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".sign.in.and.up.SignUpActivity">
+        <activity android:name=".sign.in.and.up.SignUpActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".sign.in.and.up.FindIdActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".sign.in.and.up.FindPwActivity"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>
